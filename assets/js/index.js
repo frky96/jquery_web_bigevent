@@ -11,6 +11,15 @@ $(function () {
       layer.close(index);
     })
   })
+
+  console.log($('#nav_top_info'));
+  
+  // $('#nav_top_info').on('click', function() {
+  //   // console.log($('#top_left_user'));
+  //   // console.log($('#nav_left_info')[0].click);
+  //   // $('#top_left_user').click()
+  //   // // $('#nav_left_info')[0].click()
+  // })
 })
 
 
@@ -23,7 +32,7 @@ function getUserInfo() {
     //   Authorization: localStorage.getItem('token') || ''
     // },
     success: function (res) {
-      console.log(res);
+      // console.log(res);
       if (res.status !== 0) return layui.layer.msg(res.message);
       layui.layer.msg(res.message);
       renderAvatar(res.data);
